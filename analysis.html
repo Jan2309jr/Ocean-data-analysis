@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Data Visualization</title>
+  <link rel="stylesheet" type="text/css" href="analysis.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#" onclick="showPage('CTD')">CTD Profiles</a></li>
+      <li><a href="#" onclick="showPage('TS')">T-S Diagram</a></li>
+      <li><a href="#" onclick="showPage('Transect')">Transect Plots</a></li>
+      <li><a href="#" onclick="showPage('TenYears')">Past Data Comparision</a></li>
+    </ul>
+  </nav>
+
+  <div id="CTD" class="page active">
+    <h1>CTD Profiles</h1>
+    <canvas id="ctdProfile"></canvas>
+    <div >A CTD profile is a vertical profile of water parameters, such as conductivity, temperature, and depth, collected by a Conductivity, Temperature, and Depth (CTD) package</div>
+  </div>
+
+  <div id="TS" class="page">
+    <h1>T-S Diagram</h1>
+    <canvas id="tsDiagram"></canvas>
+    <div>A graph that plots potential temperature on the vertical axis and salinity on the horizontal axis. T-S diagrams are used to identify water masses, and often include contours of constant potential density, called isopycnals</div>
+  </div>
+
+  <div id="Transect" class="page">
+    <iframe src="/transect.html"  class="transact-content-frame"></iframe>
+  </div>
+
+  <div id="TenYears" class="page" class="graph">
+    <h1>Ocean Data Analysis Over Past 10 Years</h1>
+    <canvas id="salinityChart" ></canvas>
+    <canvas id="seaIceChart" ></canvas>
+    <canvas id="tempChart" ></canvas>
+    <canvas id="currentsChart" ></canvas>
+    <canvas id="acidityChart" ></canvas>
+    <canvas id="oxygenChart" ></canvas>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="analysis.js"></script>
+</body>
+</html>

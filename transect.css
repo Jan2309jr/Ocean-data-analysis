@@ -1,0 +1,13 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    color: aliceblue;
+  }
+  body {
+    background-color: black;
+  }
+  .container {
+    max-width: 100%;
+    background-color: black;
+    height: 0px;
+  }
